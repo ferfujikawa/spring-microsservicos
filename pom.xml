@@ -13,6 +13,6 @@
   	<module>pedido-api</module>
     <module>estoque-api</module>
     <module>gateway</module>
-    <module>service-discovery</module>
+    <module>service-registry</module>
   </modules>
 </project>

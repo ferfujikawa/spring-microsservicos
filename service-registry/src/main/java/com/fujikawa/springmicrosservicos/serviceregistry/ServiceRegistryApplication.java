@@ -1,13 +1,13 @@
-package com.fujikawa.springmicrosservicos.servicediscovery;
+package com.fujikawa.springmicrosservicos.serviceregistry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceDiscoveryApplication {
+public class ServiceRegistryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServiceDiscoveryApplication.class, args);
+		SpringApplication.run(ServiceRegistryApplication.class, args);
 	}
 
 }
