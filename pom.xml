@@ -11,5 +11,8 @@
   <packaging>pom</packaging>
   <modules>
   	<module>pedido-api</module>
+    <module>estoque-api</module>
+    <module>gateway</module>
+    <module>service-discovery</module>
   </modules>
 </project>
