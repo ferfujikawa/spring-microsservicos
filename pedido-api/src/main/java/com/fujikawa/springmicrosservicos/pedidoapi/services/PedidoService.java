@@ -3,9 +3,9 @@ package com.fujikawa.springmicrosservicos.pedidoapi.services;
 import java.util.UUID;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.fujikawa.springmicrosservicos.pedidoapi.amqp.PedidoRealizadoAMQPConfiguration;
 import com.fujikawa.springmicrosservicos.pedidoapi.dtos.PedidoItemDTO;
 import com.fujikawa.springmicrosservicos.pedidoapi.dtos.PedidoRealizadoDTO;
 import com.fujikawa.springmicrosservicos.pedidoapi.dtos.RegistrarPedidoDTO;
@@ -18,9 +18,9 @@ public class PedidoService {
 
     public PedidoService(
         RabbitTemplate rabbitTemplate,
-        @Value("${exchanges.pedidoRealizado}") String pedidoRealizadoExchange) {
+        PedidoRealizadoAMQPConfiguration pedidoRealizadoAMQPConf) {
         this.rabbitTemplate = rabbitTemplate;
-        this.pedidoRealizadoExchange = pedidoRealizadoExchange;
+        this.pedidoRealizadoExchange = pedidoRealizadoAMQPConf.getExchange();
     }
 
     public PedidoRealizadoDTO realizarPedido(RegistrarPedidoDTO dto) {

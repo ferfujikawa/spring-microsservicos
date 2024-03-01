@@ -8,14 +8,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PedidoRealizadoAMQPConfiguration {
 
-    private String pedidoRealizadoExchange;
+    private String exchange;
 
-    public PedidoRealizadoAMQPConfiguration(@Value("${exchanges.pedidoRealizado}") String pedidoRealizadoExchange) {
-        this.pedidoRealizadoExchange = pedidoRealizadoExchange;
+    public PedidoRealizadoAMQPConfiguration(
+        @Value("${amqp.pedidoRealizado.exchange}") String exchange) {
+
+        this.exchange = exchange;
+    }
+
+    public String getExchange() {
+        return exchange;
     }
 
     @Bean
     public FanoutExchange fanoutExchange() {
-        return new FanoutExchange(pedidoRealizadoExchange);
+        return new FanoutExchange(exchange);
     }
 }
