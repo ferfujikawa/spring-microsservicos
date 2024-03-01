@@ -16,7 +16,7 @@ public class EstoqueBaixarListener {
         this.estoqueService = estoqueService;
     }
 
-    @RabbitListener(queues = "estoque.baixar")
+    @RabbitListener(queues = "#{fila.name}")
     public void receberMensagem(PedidoRealizadoDTO pedido) {
 
         pedido.itens().forEach(i -> estoqueService.baixarEstoque(new BaixarEstoqueDTO(i.idProduto(), i.quantidade())));
