@@ -17,8 +17,8 @@ public class EstoqueBaixarConsumeAMQPConfiguration {
     private String queue;
 
     public EstoqueBaixarConsumeAMQPConfiguration(
-        @Value("${amqp.consume.estoqueBaixar.exchange}") String exchange,
-        @Value("${amqp.consume.estoqueBaixar.queue}") String queue) {
+        @Value("${app.rabbitmq.estoqueBaixar.exchange}") String exchange,
+        @Value("${app.rabbitmq.estoqueBaixar.queue}") String queue) {
 
         this.exchange = exchange;
         this.queue = queue;

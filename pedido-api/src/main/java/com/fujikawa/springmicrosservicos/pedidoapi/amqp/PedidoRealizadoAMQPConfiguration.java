@@ -11,7 +11,7 @@ public class PedidoRealizadoAMQPConfiguration {
     private String exchange;
 
     public PedidoRealizadoAMQPConfiguration(
-        @Value("${amqp.pedidoRealizado.exchange}") String exchange) {
+        @Value("${app.rabbitmq.pedidoRealizado.exchange}") String exchange) {
 
         this.exchange = exchange;
     }
