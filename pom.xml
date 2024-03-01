@@ -11,7 +11,7 @@
   <packaging>pom</packaging>
   <modules>
   	<module>pedido-api</module>
-    <module>estoque-api</module>
+    <module>estoque-ms</module>
     <module>gateway</module>
     <module>service-registry</module>
   </modules>

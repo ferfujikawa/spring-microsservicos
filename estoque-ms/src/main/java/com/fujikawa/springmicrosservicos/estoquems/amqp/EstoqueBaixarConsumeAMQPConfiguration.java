@@ -1,4 +1,4 @@
-package com.fujikawa.springmicrosservicos.estoqueapi.amqp;
+package com.fujikawa.springmicrosservicos.estoquems.amqp;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

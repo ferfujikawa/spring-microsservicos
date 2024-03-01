@@ -1,11 +1,11 @@
-package com.fujikawa.springmicrosservicos.estoqueapi.amqp;
+package com.fujikawa.springmicrosservicos.estoquems.amqp;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import com.fujikawa.springmicrosservicos.estoqueapi.dtos.BaixarEstoqueDTO;
-import com.fujikawa.springmicrosservicos.estoqueapi.dtos.PedidoRealizadoDTO;
-import com.fujikawa.springmicrosservicos.estoqueapi.services.EstoqueService;
+import com.fujikawa.springmicrosservicos.estoquems.dtos.BaixarEstoqueDTO;
+import com.fujikawa.springmicrosservicos.estoquems.dtos.PedidoRealizadoDTO;
+import com.fujikawa.springmicrosservicos.estoquems.services.EstoqueService;
 
 @Component
 public class EstoqueBaixarListener {

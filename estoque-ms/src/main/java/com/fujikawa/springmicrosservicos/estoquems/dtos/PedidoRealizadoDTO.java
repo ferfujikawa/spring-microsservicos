@@ -1,4 +1,4 @@
-package com.fujikawa.springmicrosservicos.estoqueapi.dtos;
+package com.fujikawa.springmicrosservicos.estoquems.dtos;
 
 import java.util.List;
 import java.util.UUID;

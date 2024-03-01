@@ -1,10 +1,10 @@
-package com.fujikawa.springmicrosservicos.estoqueapi.services;
+package com.fujikawa.springmicrosservicos.estoquems.services;
 
 import java.util.Random;
 
 import org.springframework.stereotype.Service;
 
-import com.fujikawa.springmicrosservicos.estoqueapi.dtos.BaixarEstoqueDTO;
+import com.fujikawa.springmicrosservicos.estoquems.dtos.BaixarEstoqueDTO;
 
 @Service
 public class EstoqueService {

@@ -1,4 +1,4 @@
-package com.fujikawa.springmicrosservicos.estoqueapi;
+package com.fujikawa.springmicrosservicos.estoquems;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
