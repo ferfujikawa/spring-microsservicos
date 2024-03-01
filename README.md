@@ -5,8 +5,8 @@ Projeto composto de vários subprojetos para prática de conceitos de arquitetur
 ## URLs
 
 - http://localhost:8081 = Servidor Eureka (onde as APIs e o Gateway são registrados).
-- http://localhost:8082/pedidos-ms = Home da API de pedidos (contém endpoint POST para realização de pedidos, enviando uma mensagem de pedido realizado para uma *exchange* do RabbitMQ).
-- http://localhost:8082/estoque-ms = Home da API de estoque (contém um *listener* para recebimento de mensagens da *exchange* onde a API de pedidos faz envio).
+- http://localhost:8082/pedidos-ms = Home da API de pedidos via Gateway (contém endpoint POST para realização de pedidos, enviando uma mensagem de pedido realizado para uma *exchange* do RabbitMQ).
+- http://localhost:8082/estoque-ms = Home da API de estoque via Gateway (contém um *listener* para recebimento de mensagens da *exchange* onde a API de pedidos faz envio).
 
 ## Requisitos
 
