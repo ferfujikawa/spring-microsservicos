@@ -5,15 +5,19 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 import com.fujikawa.springmicrosservicos.estoqueapi.dtos.BaixarEstoqueDTO;
-import com.fujikawa.springmicrosservicos.estoqueapi.dtos.EstoqueBaixadoDTO;
 
 @Service
 public class EstoqueService {
 
-    public EstoqueBaixadoDTO baixarEstoque(BaixarEstoqueDTO dto) {
+    public void baixarEstoque(BaixarEstoqueDTO dto) {
 
         var estoqueAnterior = new Random().nextInt(50,100);
+        var estoqueAtual = estoqueAnterior - dto.quantidade();
 
-        return new EstoqueBaixadoDTO(estoqueAnterior, estoqueAnterior - dto.quantidade());
+        System.out.printf(
+            "Estoque do produto de id '%s' baixado de %d para %d\n",
+            dto.idProduto(),
+            estoqueAnterior,
+            estoqueAtual);
     }
 }
