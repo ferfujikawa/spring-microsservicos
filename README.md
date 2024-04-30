@@ -20,10 +20,10 @@ docker compose up
 
 Exemplo de cadastro de pedido:
 ```bash
-curl -i -X POST http://localhost:8082/pedidos-ms/pedidos
-  -H 'Content-Type: application/json'
-  -d $'{
-        "cliente": "Cliente 1",
+curl -i -X POST http://localhost:8082/pedidos-ms/pedidos \
+  -H 'Content-Type: application/json' \
+  -d $'{ 
+        "cliente": "Cliente 1", 
         "data": "2024-04-30T13:50:23",
         "itens": [
             {
