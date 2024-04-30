@@ -41,5 +41,9 @@ curl -i -X POST http://localhost:8082/pedidos-ms/pedidos \
 - Conforme as requisições de pedido são realizadas, `pedido-api` envia os dados do pedido para uma fila do RabbitMQ.
 - O serviço `estoque-ms` consome a fila do RabbitMQ, simula um processamento de baixa de estoque e imprime uma mensagem com dados da baixa e situação do estoque do produto.
 - Acesse o log do container `estoque-ms` para visualizar as mensagens produzidas de acordo com o consumo de filas do RabbitMQ.
-> Para acessar o log do container, utilize o comando ```bash docker logs estoque-ms -f```.
-> Exemplo de mensagem exibida no log do container estoque-ms: `Estoque do produto de id 'cc4adcd2-2dec-4d2f-abab-1548de047565' baixado de 76 para 66`
+> Para acessar o log do container, utilize o comando abaixo:
+```bash
+docker logs estoque-ms -f
+```
+> Exemplo de mensagem exibida no log do container estoque-ms:  
+> `Estoque do produto de id 'cc4adcd2-2dec-4d2f-abab-1548de047565' baixado de 76 para 66`
